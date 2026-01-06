@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://3q3ykaaoykob"]
+
+[ext_resource type="Texture2D" uid="uid://jvx1v3hrhq7d" path="res://PARALLAX_CAVE/1.png" id="1_q58vu"]
+[ext_resource type="Texture2D" uid="uid://dwptvxyfn8kbx" path="res://PARALLAX_CAVE/2.png" id="2_it0g5"]
+[ext_resource type="Texture2D" uid="uid://d0lmgfgmm3ac2" path="res://PARALLAX_CAVE/3fx.png" id="3_ekjnb"]
+[ext_resource type="Texture2D" uid="uid://dae3f2m1m8evd" path="res://PARALLAX_CAVE/4.png" id="4_5ev0n"]
+[ext_resource type="Texture2D" uid="uid://bprg6biexqywx" path="res://PARALLAX_CAVE/5.png" id="5_lu30v"]
+[ext_resource type="Texture2D" uid="uid://dhvq0eo1ak8ce" path="res://PARALLAX_CAVE/6fx.png" id="6_1urc3"]
+[ext_resource type="Texture2D" uid="uid://bs72l1hfkjykj" path="res://PARALLAX_CAVE/7.png" id="7_pdq4u"]
+[ext_resource type="Texture2D" uid="uid://ceobta785w3kw" path="res://PARALLAX_CAVE/8fx.png" id="8_60vy8"]
+[ext_resource type="Texture2D" uid="uid://c70t8pqntbm3f" path="res://PARALLAX_CAVE/9.png" id="9_qxevj"]
+[ext_resource type="PackedScene" uid="uid://c34skemd6qsvf" path="res://Caver.tscn" id="10_hcftt"]
+[ext_resource type="PackedScene" uid="uid://dg2h4u64qltg2" path="res://P1.tscn" id="11_ra7mx"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="PRLX_Fondo_C1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PRLX_Fondo_C1"]
+position = Vector2(897.5, 367.75)
+scale = Vector2(0.927604, 0.683796)
+texture = ExtResource("1_q58vu")
+
+[node name="PRLX_Est_C2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.025, 0.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PRLX_Est_C2"]
+position = Vector2(899.5, 370.5)
+scale = Vector2(0.928646, 0.686111)
+texture = ExtResource("2_it0g5")
+
+[node name="PRLX_luz_C3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PRLX_luz_C3"]
+position = Vector2(906.5, 365)
+scale = Vector2(0.931771, 0.666667)
+texture = ExtResource("3_ekjnb")
+
+[node name="PRLX_Est_C4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.25, 0.992)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PRLX_Est_C4"]
+position = Vector2(891.5, 370)
+scale = Vector2(0.926562, 0.681481)
+texture = ExtResource("4_5ev0n")
+
+[node name="PRLX_Est_C5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.25, 0.992)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PRLX_Est_C5"]
+position = Vector2(893, 368)
+scale = Vector2(0.928125, 0.685185)
+texture = ExtResource("5_lu30v")
+
+[node name="PRLX_Luz_C6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.125, 0.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PRLX_Luz_C6"]
+position = Vector2(900, 366)
+scale = Vector2(0.933854, 0.663889)
+texture = ExtResource("6_1urc3")
+
+[node name="PRLX_Est_C7" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.75, 0.999)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PRLX_Est_C7"]
+position = Vector2(890, 366)
+scale = Vector2(0.926562, 0.67963)
+texture = ExtResource("7_pdq4u")
+
+[node name="PRLX_Luz_C8" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PRLX_Luz_C8"]
+position = Vector2(890, 359)
+scale = Vector2(0.922917, 0.688889)
+texture = ExtResource("8_60vy8")
+
+[node name="PRLX_Est_C9" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1.563, 1.25)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/PRLX_Est_C9"]
+position = Vector2(903, 375.5)
+scale = Vector2(0.945833, 0.691667)
+texture = ExtResource("9_qxevj")
+
+[node name="Cave_Floor" parent="." instance=ExtResource("10_hcftt")]
+position = Vector2(-2, 563)
+
+[node name="Smile" parent="." instance=ExtResource("11_ra7mx")]
+position = Vector2(168, 535)
